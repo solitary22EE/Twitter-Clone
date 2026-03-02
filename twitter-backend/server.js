@@ -14,9 +14,9 @@ app.use(express.json());
 
 // Routes
 app.use("/api/auth", require("./routes/auth"));
-// app.use("/api/tweets", require("./routes/tweetRoutes"));
-// app.use("/api/follow", require("./routes/followRoutes"));
-// app.use("/api/like", require("./routes/likeRoutes"));
+app.use('/api/tweets', require('./routes/tweets'));
+app.use('/api/comments', require('./routes/comments'));
+app.use('/api/follows', require('./routes/follows'));
 app.get("/", (req, res) => {
   res.send("API Running 🚀");
 });
